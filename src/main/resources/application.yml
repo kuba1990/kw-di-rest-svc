@@ -1,0 +1,40 @@
+server:
+  context-path: /di-rest-svc/v1
+  port: 8080
+  error.whitelabel.enabled: false
+
+application:
+  api:
+    id: di-rest-svc
+    version: v1
+
+endpoints:
+  info:
+    enabled: true
+
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+
+microservice:
+  oauth2:
+    enabled: false
+
+
+spring:
+  datasource:
+      url: jdbc:mariadb://localhost:3306/aml_prtfl_s_dev
+      driver-class-name: org.mariadb.jdbc.Driver
+      username: aml_prtfl_s_dev
+      password: iemeTuopa3Ee
+      platform: mysql
+      separator: ;
+  jpa:
+      properties:
+        hibernate:
+          show_sql: true
+          format_sql: true
